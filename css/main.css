@@ -1400,7 +1400,10 @@ template {
           margin-top: 16px; } }
 
 .modal--2 {
-  height: 290px; }
+  height: 360px; }
+  @media (min-width: 768px) {
+    .modal--2 {
+      height: 290px; } }
 
 html {
   box-sizing: border-box; }
