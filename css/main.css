@@ -611,19 +611,18 @@ template {
   font-family: "TT Lakes";
   font-size: 16px;
   color: #7e7e82;
-  margin-right: 5px;
   padding: 8px 16px;
   overflow-x: auto;
   display: inline-block;
-  text-decoration: none; }
-  .list__item:focus {
+  text-decoration: none;
+  margin: 1px;
+  margin-left: 5px; }
+  .list__item:hover {
     border: 1px solid #41f6d7;
     border-radius: 6px;
-    background-color: #fff; }
-  .list__item:first-child {
-    border: 1px solid #41f6d7;
-    border-radius: 6px;
-    background-color: #fff; }
+    background-color: #fff;
+    margin: -1px;
+    margin-left: 5px; }
 
 .item__menu {
   display: none; }
@@ -722,7 +721,9 @@ template {
     padding-top: 16px; }
     .blog__paragraph:last-of-type {
       padding: 0px 16px;
-      display: block; }
+      display: block;
+      overflow-y: hidden;
+      max-height: 76px; }
   .item__box {
     padding-left: 32px;
     display: flex;
@@ -736,15 +737,26 @@ template {
     align-items: center; } }
 
 .service-show {
-  height: 615px; }
+  height: 705px; }
   .service-show .blog__paragraph:last-of-type {
     display: block;
-    margin-top: 16px; }
+    margin-top: 14px; }
+  @media (min-width: 486px) {
+    .service-show {
+      height: 645px; } }
   @media (min-width: 768px) {
     .service-show {
-      height: 410px; }
+      height: 458px; }
       .service-show .blog__paragraph:last-of-type {
         display: block; } }
+  @media (min-width: 1120px) {
+    .service-show {
+      height: 446px; }
+    .service-show .blog__paragraph:last-of-type {
+      max-height: -webkit-max-content;
+      max-height: -moz-max-content;
+      max-height: max-content;
+      margin-top: 0; } }
 
 .brends__wrapper {
   height: 200px;
@@ -984,6 +996,14 @@ template {
   align-items: center;
   white-space: nowrap;
   cursor: pointer; }
+  .devices__item > p {
+    align-self: flex-start;
+    margin-left: 16px;
+    margin-top: 16px; }
+  .devices__item > .btn__brend {
+    align-self: flex-end;
+    margin-right: 16px;
+    margin-bottom: 16px; }
 
 .btn__brend {
   width: 40px;
@@ -1082,7 +1102,7 @@ template {
     margin-top: 24px;
     margin-left: 32px; }
   .devices__item {
-    margin: 0 30px 24px 0;
+    margin: 0 24px 24px 0;
     min-width: 240px; } }
 
 .wrapper--mid {
@@ -1104,11 +1124,6 @@ template {
   height: 556px;
   background-color: #f8f8f8;
   overflow-x: hidden; }
-  .prices__wrapper .swiper-horizontal > .swiper-pagination-bullets,
-  .prices__wrapper .swiper-pagination-bullets.swiper-pagination-horizontal,
-  .prices__wrapper .swiper-pagination-custom,
-  .prices__wrapper .swiper-pagination-fraction {
-    bottom: 186px !important; }
 
 .price,
 .time,
@@ -1341,11 +1356,16 @@ template {
   @media (min-width: 768px) {
     .modal {
       margin: auto;
-      width: 513px;
+      width: 458px;
       height: 100%;
-      max-height: 676px; }
+      max-height: 676px;
+      top: 0;
+      right: 0;
+      position: absolute;
+      padding: 0; }
       .modal .form-wrapper {
-        width: 376px; }
+        width: 376px;
+        border-radius: 8px 0 0 8px; }
         .modal .form-wrapper p {
           margin-bottom: 16px; }
       .modal textarea {
@@ -1398,12 +1418,6 @@ template {
         height: 100%; }
         .modal--visible .form-wrapper > h2 {
           margin-top: 16px; } }
-
-.modal--2 {
-  height: 360px; }
-  @media (min-width: 768px) {
-    .modal--2 {
-      height: 290px; } }
 
 html {
   box-sizing: border-box; }
